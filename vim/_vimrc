@@ -75,6 +75,9 @@ let g:user_zen_settings = {
   \  },
   \}
 
+" pylint
+autocmd FileType python compiler pylint
+
 " JSON
 au! BufRead,BufNewFile *.json set filetype=json
 augroup json_autocmd
