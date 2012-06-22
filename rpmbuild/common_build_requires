@@ -1,3 +1,4 @@
+## We don't list these common packages in Requires or BuildRequires.
 bash
 bzip2
 coreutils
