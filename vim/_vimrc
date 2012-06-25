@@ -1,3 +1,6 @@
+set exrc                " enable per-directory vimrc
+set secure              " disable unsafe commands in local .vimrc file
+
 """ User Interface
 set guifont=Monaco:h14
 set guioptions-=T
