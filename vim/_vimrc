@@ -1,3 +1,41 @@
+set nocompatible
+
+""" Vundle
+filetype off            " required by Pathogen or Vundle.
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+" Bundles on github
+Bundle 'spf13/snipmate-snippets'
+Bundle 'rstacruz/sparkup'
+" Bundles in vim-scripts repos
+Bundle 'delimitMate.vim'
+Bundle 'matchit.zip'
+Bundle 'minibufexpl.vim'
+Bundle 'NrrwRgn'
+Bundle 'SearchComplete'
+Bundle 'snipMate'
+Bundle 'Syntastic'
+Bundle 'Tagbar'
+Bundle 'TaskList.vim'
+Bundle 'The-NERD-tree'
+Bundle 'The-NERD-Commenter'
+Bundle 'vim-json-bundle'
+Bundle 'pylint.vim'
+" Bundles from git repos directly
+
+let g:miniBufExplMapWindowNavVim=1
+let g:miniBufExplMapWindowNavArrows=1
+let g:miniBufExplMapCTabSwitchBufs=1
+let g:miniBufExplModSelTarget=1
+
+map T :TaskList<CR>
+
+""" distributed vimrc
 set exrc                " enable per-directory vimrc
 set secure              " disable unsafe commands in local .vimrc file
 
@@ -5,24 +43,27 @@ set secure              " disable unsafe commands in local .vimrc file
 set guifont=Monaco:h14
 set guioptions-=T
 set ruler               " Show the row and column number of the cursor position in the status line.
-
 set wildmenu            " Popup a window showing all matching command above command line when autocomplete.
+set showmode
 
 """ General
-" Sets how many lines of history VIM has to remeber.
-set history=100
+set hidden
+set modelines=0         " disable modeline
+set history=100         " Sets how many lines of history VIM has to remeber.
 
 " backspace key behavior
 set backspace=eol,start,indent
-set wrap
+set nowrap
+
+" highlight end of line whitespaces.
+highlight WhitespaceEOL ctermbg=red guibg=red
+match WhitespaceEOL /\s\+$/
 
 " Set to auto read when a file is changed from the outside.
 set autoread
 
 " Jump to the last position when reopening a file
-if has("autocmd")
-    autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " search
 set incsearch           " incremental search mode
@@ -30,10 +71,12 @@ set hlsearch            " highlight search things
 set ignorecase          " ignore case when searching
 set smartcase           " only works when ignorecase on
 
+" Loading the plugin and indentation rules according to the dectected filetype. 
+filetype plugin indent on
+
 " encoding
 set encoding=utf-8
 set fileencodings=utf-8,latin-1,chinese
-
 
 """ Coding 
 syntax on
@@ -43,7 +86,7 @@ set matchtime=2         " the length of time to show matching paren.
 
 set iskeyword+=_,$,@,%,#,-  " don't linebreak when encounter these characters.
 
-set tabstop=8		" The number of spaces count for a TAB.
+set tabstop=8           " The number of spaces count for a TAB.
 set softtabstop=4	" The number of spaces inserted when typing TAB. If not expandtab, type TAB twice, will get one TAB.
 set shiftwidth=4	" The number of spaces when auto-indent.
 set expandtab		" Use the spaces only.
@@ -54,16 +97,13 @@ set smartindent
 
 set autowrite		" Automatically save before commands like :next and :make
 
-" Loading the plugin and indentation rules according to the dectected filetype. 
-if has("autocmd")
-    filetype plugin indent on
-endif
-
-" setup new filetype: jsfl
-autocmd BufRead,BufNewFile *.jsfl	set filetype=javascript
+" jsfl JavaScript in Flash, same syntax as javascript
+autocmd BufRead,BufNewFile *.jsfl set filetype=javascript
 
 " Python
 let python_highlight_all=1
+autocmd FileType python compiler pylint
+autocmd FileType python set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 let g:user_zen_settings = {
   \  'php' : {
@@ -77,9 +117,6 @@ let g:user_zen_settings = {
   \    'extends' : 'html',
   \  },
   \}
-
-" pylint
-autocmd FileType python compiler pylint
 
 " JSON
 au! BufRead,BufNewFile *.json set filetype=json
