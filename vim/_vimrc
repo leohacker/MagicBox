@@ -12,28 +12,44 @@ Bundle 'gmarik/vundle'
 " Bundles on github
 Bundle 'spf13/snipmate-snippets'
 Bundle 'rstacruz/sparkup'
+Bundle 'klen/python-mode'
 " Bundles in vim-scripts repos
+Bundle 'snipMate'
 Bundle 'delimitMate.vim'
 Bundle 'matchit.zip'
-Bundle 'minibufexpl.vim'
 Bundle 'NrrwRgn'
 Bundle 'SearchComplete'
-Bundle 'snipMate'
+
+Bundle 'minibufexpl.vim'
+Bundle 'The-NERD-tree'
+Bundle 'ZoomWin'
+Bundle 'Gundo'
+
 Bundle 'Syntastic'
 Bundle 'Tagbar'
 Bundle 'TaskList.vim'
-Bundle 'The-NERD-tree'
-Bundle 'The-NERD-Commenter'
+Bundle 'tComment'
+
 Bundle 'vim-json-bundle'
-Bundle 'pylint.vim'
+Bundle 'css_color.vim'
 " Bundles from git repos directly
+
+" Configuration for bundles.
+let g:pymod_lint_write=0
+let g:pymode_run=0
+let g:pymode_doc=1
+let g:pymode_doc_key='K'
 
 let g:miniBufExplMapWindowNavVim=1
 let g:miniBufExplMapWindowNavArrows=1
 let g:miniBufExplMapCTabSwitchBufs=1
 let g:miniBufExplModSelTarget=1
 
-map T :TaskList<CR>
+map <leader>task :TaskList<CR>
+map <leader>undo :GundoToggle<CR>
+let g:gundo_preview_bottom=1
+
+map <leader>p :NERDTreeToggle<CR>
 
 """ distributed vimrc
 set exrc                " enable per-directory vimrc
@@ -45,9 +61,10 @@ set guioptions-=T
 set ruler               " Show the row and column number of the cursor position in the status line.
 set wildmenu            " Popup a window showing all matching command above command line when autocomplete.
 set showmode
+set mouse=a             " enable mouse in all modes.
 
 """ General
-set hidden
+set hidden              " hidden current unsaved buffer if open a new buffer.
 set modelines=0         " disable modeline
 set history=100         " Sets how many lines of history VIM has to remeber.
 
@@ -59,8 +76,8 @@ set nowrap
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
 
-" Set to auto read when a file is changed from the outside.
-set autoread
+set autoread            " Set to auto read when a file is changed from the outside.
+set autowrite		" Automatically save before commands like :next and :make
 
 " Jump to the last position when reopening a file
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -78,7 +95,7 @@ filetype plugin indent on
 set encoding=utf-8
 set fileencodings=utf-8,latin-1,chinese
 
-""" Coding 
+""" Coding
 syntax on
 set number		" show line number
 set showmatch 		" show matching brackets.
@@ -95,16 +112,15 @@ set autoindent
 set smartindent
 "set cindent            " cindent will disable smartindent, but only for C-like programming.
 
-set autowrite		" Automatically save before commands like :next and :make
 
 " jsfl JavaScript in Flash, same syntax as javascript
 autocmd BufRead,BufNewFile *.jsfl set filetype=javascript
 
 " Python
 let python_highlight_all=1
-autocmd FileType python compiler pylint
 autocmd FileType python set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 
+" Zencoding
 let g:user_zen_settings = {
   \  'php' : {
   \    'extends' : 'html',
