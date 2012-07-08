@@ -1,0 +1,33 @@
+{
+	"auto_complete_commit_on_tab": true,
+	"auto_complete_with_fields": true,
+	"detect_indentation": true,
+	"font_face": "Consolas",
+	"font_size": 13.0,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"C#",
+		"ASP",
+		"ActionScript",
+		"Vintage"
+	],
+	"indent_to_bracket": true,
+	"todo":
+	{
+		"case_sensitive": true,
+		"patterns":
+		{
+			"CHANGED": "CHANGED[\\s]*?:+(?P<changed>\\S.*)$",
+			"FIXME": "FIX ?ME[\\s]*?:+(?P<fixme>\\S.*)$",
+			"NOTE": "NOTE[\\s]*?:+(?P<note>.*)$",
+			"TODO": "TODO[\\s]*?:+(?P<todo>.*)$"
+			"XXX": "XXX[\\s]*?:+(?P<todo>.*)$"
+		},
+		"result_title": "TODO Results"
+	},
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true,
+	"trim_trailing_white_space_on_save": true
+}
