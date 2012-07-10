@@ -100,6 +100,7 @@ syntax on
 set number		" show line number
 set showmatch 		" show matching brackets.
 set matchtime=2         " the length of time to show matching paren.
+set foldlevel=9         " open all folds
 
 set iskeyword+=_,$,@,%,#,-  " don't linebreak when encounter these characters.
 
@@ -118,7 +119,11 @@ autocmd BufRead,BufNewFile *.jsfl set filetype=javascript
 
 " Python
 let python_highlight_all=1
-autocmd FileType python set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+augroup python_autocmd
+    autocmd!
+    autocmd FileType python set foldmethod=indent
+    autocmd FileType python set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+augroup END
 
 " Zencoding
 let g:user_zen_settings = {
