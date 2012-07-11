@@ -11,4 +11,7 @@ PATH=$PATH:$HOME/.local/bin:$HOME/bin
 export PATH
 
 # alias
-alias pylint='pylint --rcfile=~/.pylint.rc'
+alias pylint='pylint --rcfile=~/.pylintrc'
+
+# Customized PS1
+export PS1="\n[\u@\h \W]\$ "
