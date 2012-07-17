@@ -108,7 +108,6 @@ Bundle 'matchit.zip'
 Bundle 'NrrwRgn'
 Bundle 'SearchComplete'
 
-Bundle 'minibufexpl.vim'
 Bundle 'The-NERD-tree'
 Bundle 'ZoomWin'
 Bundle 'Gundo'
