@@ -2,6 +2,40 @@
 	"auto_complete_commit_on_tab": true,
 	"auto_complete_with_fields": true,
 	"detect_indentation": true,
+	"spell_check": true,
+	"file_exclude_patterns":
+	[
+		"*.swp",
+		".coverage",
+		".noseids",
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db"
+	],
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		".ropeproject"
+	],
 	"font_face": "Consolas",
 	"font_size": 13.0,
 	"highlight_line": true,
@@ -23,7 +57,6 @@
 			"FIXME": "FIX ?ME[\\s]*?:+(?P<fixme>\\S.*)$",
 			"NOTE": "NOTE[\\s]*?:+(?P<note>.*)$",
 			"TODO": "TODO[\\s]*?:+(?P<todo>.*)$"
-			"XXX": "XXX[\\s]*?:+(?P<todo>.*)$"
 		},
 		"result_title": "TODO Results"
 	},
