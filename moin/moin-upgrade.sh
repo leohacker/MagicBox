@@ -1,4 +1,12 @@
 #!/bin/bash
+
+# Usage:
+# unpack the latest moin tar package in ~/moin, then run upgrade script to 
+#  1. customize moin installation.
+#  2. link the page from Dropbox folder, ~/Dropbox.
+#
+# ./moin-upgrade.sh ~/moin
+
 MOIN_INSTDIR=$1
 cp wikiconfig.py ${MOIN_INSTDIR}
 cp gugiel.py ${MOIN_INSTDIR}/MoinMoin/theme
