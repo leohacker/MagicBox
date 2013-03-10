@@ -1,17 +1,36 @@
-# .bash_profile
-
-# Get the aliases and functions
 if [ -f ~/.bashrc ]; then
-	. ~/.bashrc
+    . ~/.bashrc
 fi
 
-# User specific environment and startup programs
+if [ -f ~/.git-completion.bash ]; then
+    . ~/.git-completion.bash
+fi
 
-PATH=$PATH:$HOME/.local/bin:$HOME/bin
+export PATH=$PATH:~/bin
+export PATH=$PATH:/Developer/Tools
+export EDITOR=/usr/bin/vim
+export PS1="\h:\W $ "
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+# source the completion for rvm.
+[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
+# Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin 
+
+# Setting PATH for Python 2.7
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
 
-# alias
-alias pylint='pylint --rcfile=~/.pylintrc'
+# pip bash completion start
+_pip_completion()
+{
+    COMPREPLY=( $( COMP_WORDS="${COMP_WORDS[*]}" \
+                   COMP_CWORD=$COMP_CWORD \
+                   PIP_AUTO_COMPLETE=1 $1 ) )
+}
+complete -o default -F _pip_completion pip
+# pip bash completion end
 
-# Customized PS1
-export PS1="\n[\u@\h \W]\$ "
+export PATH="/usr/local/mysql/bin:${PATH}"

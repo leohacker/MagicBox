@@ -1,0 +1,11 @@
+export CLICOLOR='true'
+export LSCOLORS='exgxfxdxcxegedabagacad'
+
+alias ll='ls -l'
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+export CATALINA_HOME=~/Applications/apache-tomcat/
+export ANT_HOME=/usr/share/ant
+
+PS1='\n \W$(__git_ps1 " (%s)") \$ '
