@@ -17,7 +17,7 @@ PS1='\n \W$(__git_ps1 " (%s)") \$ '
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
-GIT_PS1_SHOWUPSTREAM=git verbose
+GIT_PS1_SHOWUPSTREAM='git verbose'
 
 # Ruby
 # Load RVM into a shell session *as a function*
