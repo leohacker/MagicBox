@@ -2,7 +2,6 @@
 	"auto_complete_commit_on_tab": true,
 	"auto_complete_with_fields": true,
 	"detect_indentation": true,
-	"spell_check": true,
 	"file_exclude_patterns":
 	[
 		"*.swp",
@@ -36,18 +35,21 @@
 		"CVS",
 		".ropeproject"
 	],
-	"font_face": "Consolas",
 	"font_size": 13.0,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"C#",
 		"ASP",
+		"C#",
+		"Vintage",
+		"AppleScript",
+		"SFTP",
 		"ActionScript",
-		"Vintage"
+		"Emmet"
 	],
 	"indent_to_bracket": true,
+	"spell_check": true,
 	"todo":
 	{
 		"case_sensitive": true,
