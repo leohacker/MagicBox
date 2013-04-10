@@ -1,4 +1,4 @@
 MagicBox
 ========
 
-All about configuration of programming tools, Linux system config.
+All about configuration of programming tools, MacOSX/Linux system.
