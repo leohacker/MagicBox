@@ -1,6 +1,8 @@
 ### Editor and Backup
 *~
 *.swp
+*.sublime-project
+*.sublime-workspace
 
 ### Compiled source 
 *.com
