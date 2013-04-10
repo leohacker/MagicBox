@@ -1,5 +1,56 @@
 set nocompatible
 
+""" Vundle
+filetype off            " required by Pathogen or Vundle.
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+" Bundles on github
+Bundle 'spf13/snipmate-snippets'
+Bundle 'rstacruz/sparkup'
+Bundle 'klen/python-mode'
+" Bundles in vim-scripts repos
+Bundle 'snipMate'
+Bundle 'delimitMate.vim'
+Bundle 'matchit.zip'
+Bundle 'NrrwRgn'
+Bundle 'SearchComplete'
+
+Bundle 'minibufexpl.vim'
+Bundle 'The-NERD-tree'
+Bundle 'ZoomWin'
+Bundle 'Gundo'
+
+Bundle 'Syntastic'
+Bundle 'Tagbar'
+Bundle 'TaskList.vim'
+Bundle 'tComment'
+
+Bundle 'vim-json-bundle'
+Bundle 'css_color.vim'
+" Bundles from git repos directly
+
+" Configuration for bundles.
+let g:pymod_lint_write=0
+let g:pymode_run=0
+let g:pymode_doc=1
+let g:pymode_doc_key='K'
+
+let g:miniBufExplMapWindowNavVim=1
+let g:miniBufExplMapWindowNavArrows=1
+let g:miniBufExplMapCTabSwitchBufs=1
+let g:miniBufExplModSelTarget=1
+
+map <leader>task :TaskList<CR>
+map <leader>undo :GundoToggle<CR>
+let g:gundo_preview_bottom=1
+
+map <leader>p :NERDTreeToggle<CR>
+
 """ distributed vimrc
 set exrc                " enable per-directory vimrc
 set secure              " disable unsafe commands in local .vimrc file
@@ -37,11 +88,15 @@ set hlsearch            " highlight search things
 set ignorecase          " ignore case when searching
 set smartcase           " only works when ignorecase on
 
+" Loading the plugin and indentation rules according to the dectected filetype. 
+filetype plugin indent on
+
 " encoding
 set encoding=utf-8
 set fileencodings=utf-8,latin-1,chinese
 
 """ Coding
+syntax on
 set number		" show line number
 set showmatch 		" show matching brackets.
 set matchtime=2         " the length of time to show matching paren.
@@ -53,7 +108,7 @@ set tabstop=8           " The number of spaces count for a TAB.
 set softtabstop=4	" The number of spaces inserted when typing TAB. If not expandtab, type TAB twice, will get one TAB.
 set shiftwidth=4	" The number of spaces when auto-indent.
 set expandtab		" Use the spaces only.
-set smarttab            " Insert appropriate spaces in front of line according to shiftwidth, tabstop, softtabstop.
+set smarttab            " Insert appropriate spaces in front of line according to shiftwidth, tabstop, softtabstop. 
 set autoindent
 set smartindent
 "set cindent            " cindent will disable smartindent, but only for C-like programming.
@@ -61,6 +116,14 @@ set smartindent
 
 " jsfl JavaScript in Flash, same syntax as javascript
 autocmd BufRead,BufNewFile *.jsfl set filetype=javascript
+
+" Python
+let python_highlight_all=1
+augroup python_autocmd
+    autocmd!
+    autocmd FileType python set foldmethod=indent
+    autocmd FileType python set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+augroup END
 
 " Zencoding
 let g:user_zen_settings = {
@@ -87,58 +150,3 @@ augroup json_autocmd
     autocmd FileType json set expandtab
     autocmd FileType json set foldmethod=syntax
 augroup END
-
-""" Vundle
-filetype off            " required by Pathogen or Vundle.
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-Bundle 'gmarik/vundle'
-
-" Bundles on github
-Bundle 'spf13/snipmate-snippets'
-Bundle 'rstacruz/sparkup'
-Bundle 'klen/python-mode'
-" Bundles in vim-scripts repos
-Bundle 'snipMate'
-Bundle 'delimitMate.vim'
-Bundle 'matchit.zip'
-Bundle 'NrrwRgn'
-Bundle 'SearchComplete'
-
-Bundle 'The-NERD-tree'
-Bundle 'ZoomWin'
-Bundle 'Gundo'
-
-Bundle 'Syntastic'
-Bundle 'Tagbar'
-Bundle 'TaskList.vim'
-Bundle 'tComment'
-
-Bundle 'vim-json-bundle'
-Bundle 'css_color.vim'
-" Bundles from git repos directly
-
-" Configuration for bundles.
-let g:pymode_lint_write=0
-let g:pymode_run=0
-let g:pymode_doc=1
-let g:pymode_doc_key='K'
-
-let g:miniBufExplMapWindowNavVim=1
-let g:miniBufExplMapWindowNavArrows=1
-let g:miniBufExplMapCTabSwitchBufs=1
-let g:miniBufExplModSelTarget=1
-
-map <leader>task :TaskList<CR>
-map <leader>undo :GundoToggle<CR>
-let g:gundo_preview_bottom=1
-
-let g:NERDTreeIgnore=['\.pyc$']
-map <leader>p :NERDTreeToggle<CR>
-
-" Loading the plugin and indentation rules according to the dectected filetype. 
-filetype plugin indent on
-syntax on
