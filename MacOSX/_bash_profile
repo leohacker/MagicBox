@@ -3,6 +3,9 @@ export CLICOLOR='true'
 export LSCOLORS='exgxfxdxcxegedabagacad'
 export PS1="\h:\W $ "
 
+export HISTSIZE=200
+export HISTIGNORE="&:[ ]*:exit:ls:ll:cd[ ]*:cd -[ ]*:[bf]g:history"
+
 # MacOSX
 PATH=$PATH:/Developer/Tools
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
@@ -12,7 +15,7 @@ if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash
 fi
 # show the branch name in prompt in git source code folder.
-PS1='\n \W$(__git_ps1 " (%s)") \$ '
+PS1='\n\W$(__git_ps1 " (%s)") \$ '
 # e.g. GIT_PS1_SHOWDIRTYSTATE can be overrade by per-repository variable bash.showDirtyState.
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
@@ -44,7 +47,7 @@ complete -o default -F _pip_completion pip
 # MySQL
 PATH="/usr/local/mysql/bin:${PATH}"
 
-# JAVA
+# JAVA TOMCAT
 export JAVA_HOME=$(/usr/libexec/java_home)
 export CATALINA_HOME=~/Applications/apache-tomcat/
 export ANT_HOME=/usr/share/ant
@@ -53,6 +56,7 @@ export ANT_HOME=/usr/share/ant
 alias ll='ls -l'
 export EDITOR=vim
 
+PATH=/usr/local/bin:$PATH
 PATH=$PATH:~/bin
 export PATH
 
