@@ -10,11 +10,11 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Bundles on github
-Bundle 'spf13/snipmate-snippets'
+" Bundle 'spf13/snipmate-snippets'
 " write HTML in CSS-like syntax
 " Bundle 'rstacruz/sparkup'
 " Bundles in vim-scripts repos
-Bundle 'snipMate'
+" Bundle 'snipMate'
 Bundle 'delimitMate.vim'
 Bundle 'matchit.zip'
 " Bundle 'NrrwRgn'
