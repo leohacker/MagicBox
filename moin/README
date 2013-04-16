@@ -1,0 +1,8 @@
+MoinMoin in Dropbox
+===================
+
+1. Install the MoinMoin instance in your installation directory.
+2. Put the folder "pages" in dropbox folder.
+3. Link the pages folders in moinmoin installation to the folders in Dropbox.
+
+Please read the usage in script moin-upgrade.sh.
