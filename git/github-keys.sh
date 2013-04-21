@@ -1,4 +1,8 @@
 #!/bin/bash
+#
+# Switch the ssh key for github repositories: git.corp.adobe.com, github.com
+# Usage:
+#   github-keys.sh adobe|github
 
 function usage {
     echo "Usage: $0 adobe|github"
@@ -17,7 +21,7 @@ if [ $# == 0 ]; then
 fi
 
 if [ $# != 1 ]; then
-    echo "Please specify the repository name. Only one argument support."
+    echo "Please specify the repository name. Only one argument needed."
     exit -1
 fi
 
