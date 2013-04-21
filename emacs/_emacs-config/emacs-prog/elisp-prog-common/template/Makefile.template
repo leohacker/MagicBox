@@ -1,0 +1,53 @@
+# user-custom variable
+TARGET := a.out
+COMPILER = $(CC)
+LINK = $(CC)
+DEBUGLEVEL := -g -Wall
+FASTCOMPILE := -pipe
+COMMONFLAGS := -O2 -march=i686
+USER-CFLAGS =
+LFLAGS =
+LIBS =
+
+CP := cp -a
+MV := mv
+RM := rm -rf
+CC := gcc
+CXX := g++
+
+CFLAGS := $(DEBUGLEVEL) $(FASTCOMPILE) $(COMMONFLAGS)
+CFLAGS += $(USER-CFLAGS)
+
+CXXFLAGS = $(CFLAGS)
+
+# match all c/c++ impl files as souces.
+SOURCES := $(wildcard *.c *.cc *.cpp)
+# match all header files.
+HEADERS := $(wildcard *.h)
+# get the object files according the sources.
+OBJS := $(patsubst %.c,%.o,$(patsubst %.cc,%.o,$(patsubst %.cpp,%.o,$(SOURCES))))
+
+.PHONY: all clean
+all : .deps $(TARGET)
+
+# create the deps automatically
+.deps : $(SOURCES) $(HEADERS)
+	@echo create the deps
+	$(RM) .deps
+	$(COMPILER) -MM $(SOURCES) > .deps
+
+-include .deps
+
+%.o : %.c
+	$(CC) -c $(CFLAGS) $< -o $@
+
+%.o : %.cpp
+	$(CXX) -c $(CXXFLAGS) $< -o $@
+
+$(TARGET) : $(OBJS)
+	$(LINK) $(LFLAGS) $^ $(LIBS) -o $@
+
+clean :
+	-$(RM) $(TARGET)
+	-$(RM) $(OBJS)
+	-$(RM) .deps

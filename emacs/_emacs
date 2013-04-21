@@ -1,0 +1,39 @@
+;;; .emacs --- The Default Init File for Emacs
+
+;; Time-stamp: <2010-07-28 13:11:36 leojiang>
+;; Copyright (C) 2010  Leo Jiang
+
+;; Author: Leo Jiang <leo.jiang.dev@gmail.com>
+;; Keywords: Emacs, Init
+
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+;; ---------------------      Emacs Default Configuration File ------------------
+;; Commentary:
+;;   All config files is in .emacs-cofig directory. The proxy file of this
+;;   .emacs file is emacs-config.el, which is act as the portal of other el
+;;   scripts.
+
+;; set the exec path for aspell, the flyspell imple component on Mac.
+
+(setq path-emacs-config "~/.emacs-config")
+(setq load-path
+      (cons path-emacs-config load-path))
+
+(require 'leo-config)
+
+;; C-x C-e           eval the last s-exp.
+;; M-x eval-buffer   eval whole .emacs
+;; type q to quit elisp debugger.
+;; ---------------------      END OF THE .emacs SCRIPT      ---------------------
