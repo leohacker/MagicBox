@@ -10,28 +10,28 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Bundles on github
-Bundle 'spf13/snipmate-snippets'
-Bundle 'rstacruz/sparkup'
-Bundle 'klen/python-mode'
+" Bundle 'spf13/snipmate-snippets'
+" write HTML in CSS-like syntax
+" Bundle 'rstacruz/sparkup'
 " Bundles in vim-scripts repos
-Bundle 'snipMate'
+" Bundle 'snipMate'
 Bundle 'delimitMate.vim'
 Bundle 'matchit.zip'
-Bundle 'NrrwRgn'
+" Bundle 'NrrwRgn'
 Bundle 'SearchComplete'
 
-Bundle 'minibufexpl.vim'
-Bundle 'The-NERD-tree'
-Bundle 'ZoomWin'
-Bundle 'Gundo'
+" Bundle 'minibufexpl.vim'
+" Bundle 'The-NERD-tree'
+" Bundle 'ZoomWin'
+" Bundle 'Gundo'
 
 Bundle 'Syntastic'
-Bundle 'Tagbar'
-Bundle 'TaskList.vim'
+" Bundle 'Tagbar'
+" Bundle 'TaskList.vim'
 Bundle 'tComment'
 
 Bundle 'vim-json-bundle'
-Bundle 'css_color.vim'
+" Bundle 'css_color.vim'
 " Bundles from git repos directly
 
 " Configuration for bundles.

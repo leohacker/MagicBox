@@ -7,4 +7,6 @@ git config --global core.autocrlf input
 git config --global push.default simple
 git config --global alias.ci commit
 git config --global alias.st status
+git config --global credential.helper osxkeychain
 cp _gitignore_global ~/.gitignore_global
+cp _git-completion.bash ~/.git-completion.bash
