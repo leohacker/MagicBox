@@ -1,0 +1,79 @@
+#+STARTUP: overview indent hidestars odd
+#+TAGS: Bug(b) Task(t) Project(p) Read(r) Doc(e) Blog(B) Research(R) Paper(P)
+#+TAGS: Emacs(E) Shell(s) Kernel(k) System(S) GNOME(G) KDE(K) XWINDOW(X) Web20(W)
+#+SEQ_TODO: TODO(t) MAYBE(m) ACTIVE(a) PAUSE(p) | DONE(d)
+#+SEQ_TODO: REPORT(r) BUG(b) FOUND(f) CODE(c) | FIXED(x) HOLD(h)
+#+SEQ_TODO: CODE(c) DOC(e) TEST(T) | DONE(d)
+#+SEQ_TODO: | CANCEL(C)
+#+COLUMNS: %60ITEM %TODO %PRIORITY %TAGS
+
+* TODO write the org-mode tutorial                                  :Blog:Emacs:
+* TODO Emacs Org Mode Manual                                        :Read:Emacs:
+* TODO Write Muse Doc of OrgMode                                     :Doc:Emacs:
+* TODO learning Org mode table                                      :Read:Emacs:
+* TODO Emacs learning plan[0/4]                                     :Read:Emacs:
+*** TODO consolidate the Note:emacs.
+*** TODO programming relative[0/15]
+***** TODO changelog
+***** TODO cc-mode
+***** TODO python-mode
+***** TODO etags
+***** TODO indent(almost done)
+***** TODO comments
+***** TODO browsing code
+***** TODO hideshow(fold the code)
+***** TODO auto-completion
+***** TODO glasses(make the name more readable)
+***** TODO build the program
+***** TODO debug the program
+***** TODO svn/cvs/git
+***** TODO abbrevs/template/greedy editing
+*** TODO text relative[0/3]
+***** TODO sentences
+***** TODO chinese word handling
+*** TODO misc[0/7]
+***** TODO dired
+***** TODO shell/eshell
+***** TODO sorting
+***** TODO narrowing
+***** TODO session-saving
+***** TODO fonts/colors
+
+* Linux System Analysis Plan
+*** ACTIVE RedHat Package System( RPM YUM )
+*** TODO Debian Package System( apt aptitude dpkg)
+
+* 3G software development
+*** 视频点播 电影 mp3 网络商城
+*** 邮件处理 商务应用
+*** 笔记本电脑可以用上网卡上3G网络，比adsl快。
+*** 电视转播
+*** 视频电话
+*** 特定网络
+*** 手机看新闻
+*** 随时上网，查看电影资讯，查询价格
+
+* Doc Plan
+  collect the famous article, put the link and article in wiki.
+  translate them and public to blog.
+
+* Research                                                            :Research:
+*** IM Tech
+    Architecture, Art of state, SCIM source code, python IME source code, etc.
+
+* short-term object                                                  :ShortTerm:
+*** Emacs Org Mode                                                       :Emacs:
+
+* long-term object                                                    :LongTerm:
+  - [ ] bash
+  - [ ] mastering C++/C
+  - [ ] mastering python
+  - [ ] regular expression
+  - [ ] mastering Emacs
+  - [ ] linux system administration
+  - [ ] linux kernel
+  - [ ] linux development
+  - [ ] project management
+
+* idea                                                                    :Idea:
+*** Using Ruby write a online GTD system.
