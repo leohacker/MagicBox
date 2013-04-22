@@ -3,6 +3,8 @@ MagicBox
 
 All about configuration of programming tools, MacOSX/Linux system.
 
+List
+----
  * MacOSX
    * bash
    * iterm2
