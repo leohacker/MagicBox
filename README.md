@@ -23,3 +23,5 @@ All about configuration of programming tools, MacOSX/Linux system.
    * emacs-macosx-terminal
  * vim
    * vimrc
+ * sublime
+   * config
