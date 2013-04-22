@@ -10,3 +10,4 @@ git config --global alias.st status
 git config --global credential.helper osxkeychain
 cp _gitignore_global ~/.gitignore_global
 cp _git-completion.bash ~/.git-completion.bash
+cp keys.sh ~/.ssh/

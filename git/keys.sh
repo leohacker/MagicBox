@@ -10,9 +10,9 @@ function usage {
 }
 
 if [ $# == 0 ]; then
-    if cmp id_rsa ./gitadobe-keys/id_rsa; then
+    if cmp id_rsa ./gitadobe-keys/id_rsa &> /dev/null; then
         echo "adobe"
-    elif cmp id_rsa ./github-keys/id_rsa; then
+    elif cmp id_rsa ./github-keys/id_rsa &> /dev/null; then
         echo "github"
     else
         echo "Unknown repository"
