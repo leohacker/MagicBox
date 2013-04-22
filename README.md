@@ -21,3 +21,5 @@ All about configuration of programming tools, MacOSX/Linux system.
  * emacs
    * emacs-gui
    * emacs-macosx-terminal
+ * vim
+   * vimrc
