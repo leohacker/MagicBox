@@ -12,7 +12,7 @@ All about configuration of programming tools, MacOSX/Linux system.
    * A script to setup git configuration.
    * git bash completion.
    * git ignore.
- * moin
+ * moinmion
    * A script to upgrade and configure moinmoin installation.
  * python
    * nosetest config
