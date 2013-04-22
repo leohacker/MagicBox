@@ -25,3 +25,5 @@ All about configuration of programming tools, MacOSX/Linux system.
    * vimrc
  * sublime
    * config
+ * rpmbuild
+   * script for building moses.
