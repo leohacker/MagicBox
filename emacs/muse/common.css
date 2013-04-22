@@ -1,0 +1,249 @@
+/* the pre markup was derived from rubyStyle.css, the rest is from previous
+iterations of my website http://repose.cx/. help yourself to bits you like. */
+
+body {
+  font: 16px/1.2 serif;
+  /* background: #bbccdd; */
+  padding-left: 6%;
+  padding-right: 8%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin: 0;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #2B60DE;
+}
+
+a:hover {
+  background: #2B60DE;
+  color: white;
+}
+
+/*
+h1 {
+  font-family: DejaVu Sans, Bitstream Vera Sans, Tahoma, SimHei, sans-serif;
+  font-size: 32px;
+  color: #666;
+  padding: 2px;
+  margin-left: -40px;
+  margin-bottom: 8px;
+  border-bottom: 5px solid #000;
+}
+*/
+
+h1 {
+  font-family: DejaVu Sans, Arial, SimHei, sans-serif;
+  font-size: 32px;
+/*  text-align: center; */
+  color: black;
+  /* background: white url(images/glossy-back2.gif) repeat-x bottom left; */
+  background: #efefbb;
+/*  background: #ffffd6; */
+  border-top: ButtonHighlight 1px solid;
+  border-bottom: ButtonShadow 1px solid;
+  border-left: ButtonHighlight 1px solid;
+  border-right: ButtonShadow 1px solid;
+
+  padding: 2px;
+  padding-left: 10px;
+  margin-left: -40px;
+  margin-top: 5px;
+}
+
+h2 {
+  font-family: DejaVu Sans, Arial, SimHei, sans-serif;
+  font-size: 24px;
+  color: black;
+  /* background: white url(images/glossy-back1.gif) repeat-x bottom left; */
+  background: #efefbb;
+  border-top: ButtonHighlight 1px solid;
+  border-bottom: ButtonShadow 1px solid;
+  border-left: ButtonHighlight 1px solid;
+  border-right: ButtonShadow 1px solid;
+
+  padding: 2px;
+  padding-left: 5px;
+  margin-left: -30px;
+  margin-top: 5px;
+}
+
+h3 {
+  font-family: DejaVu Sans, Arial, SimHei, sans-serif;
+  font-size: 18px;
+  color: black;
+  background: #bbccdd;
+  /*border-top: 1px solid royalblue; */
+
+  padding: 2px;
+  padding-left: 10px;
+  margin-left: -15px;
+  margin-top: 5px;
+}
+
+h4 {
+  font-family: DejaVu Sans, Arial, SimHei, sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  color: black;
+  border-bottom: 1px solid royalblue;
+  border-left: 1px solid royalblue;
+  padding: 2px;
+  margin-left: -10px;
+}
+
+h5 {
+  font-family: DejaVu Sans, Arial, SimHei, sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  background: #E3E4FA;
+  margin-left: -5px;
+  padding-left: 5px;
+  color: black;
+}
+
+img {
+  background: white;
+  float: none;
+  margin-bottom: -5px;
+  border-style: solid;
+  border-width: 2px;
+  /* border-color: #00008b; */
+  border-color: lightgrey;
+}
+
+#im {
+  clear: right;
+}
+
+pre {
+  font: 14px DejaVu Sans Mono, Courier, Courier New, monospace;
+  border: #777 1px solid;
+  padding: 0.5em;
+  margin-left: 2em;
+  margin-right: 2em;
+  white-space: pre;
+
+/* background-color: #25383C;  /* dark slate gray */
+/*  background-color: #4C7D7E; /* dark slate gray4 */
+/*  color: white; /* */
+
+/* black-green theme */
+  background-color: black;
+  color: #00FF00; /* green, is more light than "color: green;"  */
+}
+
+.verse {
+  white-space: pre;
+  margin-left: 1em;
+}
+
+dt {
+  font-weight: bold;
+}
+
+li {
+  margin-bottom: 0.9ex;
+}
+
+table {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 0;
+}
+
+th {
+  font-size: 14px;
+  border-top: ButtonHighlight 1px solid;
+  border-bottom: ButtonShadow 1px solid;
+  border-left: ButtonHighlight 1px solid;
+  border-right: ButtonShadow 1px solid;
+  padding-left: 3px;
+  padding-right: 2px;
+  overflow: hidden;
+  background: #ffffbb;
+}
+
+td {
+  font-size: 14px;
+  border-top: ButtonHighlight 1px solid;
+  border-bottom: ButtonShadow 1px solid;
+  border-left: ButtonHighlight 1px solid;
+  border-right: ButtonShadow 1px solid;
+  padding-left: 3px;
+  padding-right: 2px;
+  overflow: hidden;
+  background: #ddeecc;
+}
+
+.navfoot {
+  margin-left: -30px;
+  text-align: center;
+}
+
+/*menu*/
+.menu {
+  background: #edf2f2;
+  color: white;
+  border-top: 5px solid #e0e9e9;
+  border-bottom: 3px solid #e0e9e9;
+  content: "";
+  display: inline-table;
+  float: right;
+  padding: 0;
+}
+
+.menuitem {
+  font: 14px DejaVu Sans, Arial, sans-serif;
+  margin: 0;
+  text-align: right;
+}
+
+.menuitem a:link, .menuitem a:visited {
+  display: block;
+  padding: 2px 10px 2px 10px;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #ddd;
+  color: navy;
+  text-decoration: none;
+}
+
+.menuitem a:hover {
+  color: blue;
+  background: #cceeff;
+}
+
+/* Uncomment this if you want characters to appear before a menu
+   entry when hovering the mouse over it.
+
+.menuitem a:hover:before { content:\">> \"}
+*/
+
+.menu:before {
+  /*color: transparent;*/
+  display: block;
+  content: "";
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.menu:after {
+  /*color: transparent;*/
+  display: block;
+  content: "";
+  border-top: 1px solid #fff;
+  text-align: center;
+}
+
+#tooltipbox {
+  display: none;
+  float: right;
+  /*visibility: hidden;*/
+}
+
+#tooltip {
+  color: #666;
+}
