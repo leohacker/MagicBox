@@ -18,4 +18,6 @@ All about configuration of programming tools, MacOSX/Linux system.
    * nosetest config
    * pylint config
    * pep8 config
-
+ * emacs
+   * emacs-gui
+   * emacs-macosx-terminal
