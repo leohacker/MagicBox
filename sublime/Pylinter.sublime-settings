@@ -1,0 +1,4 @@
+{
+	"python_bin": "/usr/bin/python",
+	"pylint_path": "/usr/local/bin/pylint"
+}

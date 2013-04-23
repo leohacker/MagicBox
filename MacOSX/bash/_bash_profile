@@ -6,9 +6,6 @@ export PS1="\h:\W $ "
 export HISTSIZE=200
 export HISTIGNORE="&:[ ]*:exit:ls:ll:cd[ ]*:cd -[ ]*:[bf]g:history"
 
-# MacOSX
-PATH=$PATH:/Developer/Tools
-
 # Git
 if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash
