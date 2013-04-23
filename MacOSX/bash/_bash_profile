@@ -8,7 +8,6 @@ export HISTIGNORE="&:[ ]*:exit:ls:ll:cd[ ]*:cd -[ ]*:[bf]g:history"
 
 # MacOSX
 PATH=$PATH:/Developer/Tools
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
 # Git
 if [ -f ~/.git-completion.bash ]; then
@@ -31,9 +30,6 @@ GIT_PS1_SHOWUPSTREAM='git verbose'
 PATH=$PATH:$HOME/.rvm/bin
 
 # Python
-# Setting PATH for Python 2.7
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-
 # pip bash completion start
 _pip_completion()
 {
