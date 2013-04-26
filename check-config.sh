@@ -1,4 +1,4 @@
-#!/usr/bin
+#!/usr/bin/env bash
 
 # check bash
 cd MacOSX/bash/
