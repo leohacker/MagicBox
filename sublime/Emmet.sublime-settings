@@ -1,0 +1,11 @@
+{
+    // A comma-separated list of scopes where Emmet’s Tab key
+    // abbreviation expander should be disabled
+    "disable_tab_abbreviations_for_scopes": "string",
+
+    // A comma-separated list of disabled action names.
+    // Listed action will not be triggered by default keyboard
+    // shortcut.
+    // Use "all" value to disable all shortcuts at once
+    "disabled_keymap_actions": "expand_abbreviation, update_image_size, match_pair_outward, emmet_insert_attribute, emmet_insert_attribute"
+}

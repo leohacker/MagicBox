@@ -22,7 +22,8 @@ cd - &> /dev/null
 cd sublime
 diff --brief Distraction\ Free.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
 diff --brief Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
-diff --brief Python.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
 diff --brief Pretty\ JSON.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
+diff --brief Python.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
 diff --brief Pylinter.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
+diff --brief Emmet.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
 cd - &> /dev/null
