@@ -1,8 +1,41 @@
 {
 	"auto_complete_commit_on_tab": true,
 	"auto_complete_with_fields": true,
-	"color_scheme": "Packages/Base16 Color Schemes/base16-tomorrow.dark.tmTheme",
 	"detect_indentation": true,
+
+	"indent_to_bracket": true,
+	"spell_check": true,
+
+	// Whitespace -	no tabs, trimming, end file with \n.
+	"tab_size": 4,
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true,
+	"trim_trailing_white_space_on_save": true,
+	"ensure_newline_at_eof_on_save": true,
+
+	"todo":
+	{
+		"case_sensitive": true,
+		"patterns":
+		{
+			"CHANGED": "CHANGED[\\s]*?:+(?P<changed>\\S.*)$",
+			"FIXME": "FIX ?ME[\\s]*?:+(?P<fixme>\\S.*)$",
+			"NOTE": "NOTE[\\s]*?:+(?P<note>.*)$",
+			"TODO": "TODO[\\s]*?:+(?P<todo>.*)$"
+		},
+		"result_title": "TODO Results"
+	},
+
+	// Look and feeling.
+	"font_size": 13.0,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+
+	// Color theme.
+	"color_scheme": "Packages/Base16 Color Schemes/base16-tomorrow.dark.tmTheme",
+	"theme": "Soda Dark.sublime-theme",
+
+	// Sidebar - exclude file and folder.
 	"file_exclude_patterns":
 	[
 		"*.swp",
@@ -36,9 +69,8 @@
 		"CVS",
 		".ropeproject"
 	],
-	"font_size": 13.0,
-	"highlight_line": true,
-	"highlight_modified_tabs": true,
+
+	// Package management.
 	"ignored_packages":
 	[
 		"ASP",
@@ -47,23 +79,5 @@
 		"AppleScript",
 		"SFTP",
 		"ActionScript"
-	],
-	"indent_to_bracket": true,
-	"spell_check": true,
-	"theme": "Soda Dark.sublime-theme",
-	"todo":
-	{
-		"case_sensitive": true,
-		"patterns":
-		{
-			"CHANGED": "CHANGED[\\s]*?:+(?P<changed>\\S.*)$",
-			"FIXME": "FIX ?ME[\\s]*?:+(?P<fixme>\\S.*)$",
-			"NOTE": "NOTE[\\s]*?:+(?P<note>.*)$",
-			"TODO": "TODO[\\s]*?:+(?P<todo>.*)$"
-		},
-		"result_title": "TODO Results"
-	},
-	"translate_tabs_to_spaces": true,
-	"trim_automatic_white_space": true,
-	"trim_trailing_white_space_on_save": true
+	]
 }

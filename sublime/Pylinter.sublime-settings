@@ -1,4 +1,16 @@
 {
 	"python_bin": "/usr/bin/python",
-	"pylint_path": "/usr/local/bin/pylint"
+	"pylint_path": "/usr/local/bin/pylint",
+
+    // Configure pylint's behavior
+    "pylint_rc": "/Users/daniel/dev/pylintrc",
+
+    // Show different icons for errors, warnings, etc.
+    "use_icons": true,
+
+    // Automatically run Pylinter when saving a Python document
+    "run_on_save": true,
+
+    // Don't hide pylint messages when moving the cursor
+    "message_stay": true
 }
