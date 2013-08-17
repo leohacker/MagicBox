@@ -4,7 +4,7 @@
 *.sublime-project
 *.sublime-workspace
 
-### Compiled source 
+### Compiled source
 *.com
 *.class
 *.dll
@@ -34,3 +34,6 @@
 Icon?
 Thumbs.db
 ehthumbs.db
+.Trashes
+.Spotlight-V100
+._*
