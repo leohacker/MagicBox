@@ -1,4 +1,4 @@
-function load {
+function load_bash_module {
     if [ -f $1/$module.bash ]; then
         source $1/$module.bash
         echo "$module \t loaded."
@@ -17,7 +17,5 @@ fi
 
 for module in $bash_modules
 do
-    load $bash.d $module
+    load_bash_module $bash.d $module
 done
-
-
