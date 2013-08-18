@@ -1,0 +1,23 @@
+function load {
+    if [ -f $1/$module.bash ]; then
+        source $1/$module.bash
+        echo "$module \t loaded."
+    else
+        echo "$module \t not found."
+    fi
+}
+
+bash_d=~/.bash.d
+bash_modules="common mac git python java"
+
+if [ ! -d ${bash_d} ]; then
+    echo "Module directory not found: ${bash_d}"
+    exit 1
+fi
+
+for module in $bash_modules
+do
+    load $bash.d $module
+done
+
+
