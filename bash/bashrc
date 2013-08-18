@@ -1,9 +1,8 @@
 function load_bash_module {
-    if [ -f $1/$module.bash ]; then
-        source $1/$module.bash
-        echo "$module \t loaded."
+    if [ -f $1/$2.bash ]; then
+        source $1/$2.bash
     else
-        echo "$module \t not found."
+        echo "Bash module $2 not found in $1."
     fi
 }
 
@@ -17,5 +16,5 @@ fi
 
 for module in $bash_modules
 do
-    load_bash_module $bash.d $module
+    load_bash_module $bash_d $module
 done
