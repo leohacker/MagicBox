@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 # check bash
-cd MacOSX/bash/
-diff -r --brief _bash_profile ~/.bash_profile
-diff -r --brief _bashrc ~/.bashrc
+cd bash/
+diff -r --brief bash_profile ~/.bash_profile
+diff -r --brief bashrc ~/.bashrc
 diff -r --brief bin ~/bin
 cd - &> /dev/null
 
