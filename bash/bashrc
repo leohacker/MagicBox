@@ -7,7 +7,7 @@ function load_bash_module {
 }
 
 bash_d=~/.bash.d
-bash_modules="common mac git python java"
+bash_modules="common mac git python java ruby"
 
 if [ ! -d ${bash_d} ]; then
     echo "Module directory not found: ${bash_d}"
