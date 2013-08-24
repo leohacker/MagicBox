@@ -1,7 +1,0 @@
-*.pyc
-
-### coverage
-.coverage
-
-### nose
-.noseids
