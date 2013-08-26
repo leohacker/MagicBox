@@ -1,0 +1,40 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.leohacker.maventemplate</groupId>
+  <artifactId>maventemplate-common</artifactId>
+  <packaging>pom</packaging>
+  <version>0.1</version>
+
+  <dependencyManagement>
+    <dependencies>
+        <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>4.11</version>
+          <scope>test</scope>
+        </dependency>
+        <dependency>
+          <groupId>log4j</groupId>
+          <artifactId>log4j</artifactId>
+          <version>1.2.17</version>
+        </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin> <!-- global configuration for compiler plugin. -->
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.1</version>
+          <configuration>
+            <source>1.6</source>
+            <target>1.6</target>
+            <encoding>UTF-8</encoding>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
