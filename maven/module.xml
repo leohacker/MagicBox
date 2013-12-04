@@ -1,8 +1,8 @@
   <dependency>
     <groupId>junit</groupId>
-    <artifactid>junit</artifactId>
+    <artifactId>junit</artifactId>
   </dependency>
   <dependency>
     <groupId>log4j</groupId>
-    <artifactid>log4j</artifactId>
+    <artifactId>log4j</artifactId>
   </dependency>
