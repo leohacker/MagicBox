@@ -1,5 +1,10 @@
-#Fri Mar 28 01:14:49 CST 2014
-file_export_version=3.0
+#Fri Mar 28 01:28:01 CST 2014
+/instance/org.eclipse.jdt.ui/outlinesortoption=T,SF,SI,SM,F,I,C,M,
+/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.visibility.order=B,V,R,D,
 /instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.typefilter.enabled=java.awt.*;
-@org.eclipse.jdt.ui=3.9.2.v20131106-1600
 \!/=
+file_export_version=3.0
+/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.abbreviatepackagenames=true
+/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.pkgNameAbbreviationPatternForPackagesView=com.adobe\=ADOBE\norg.leohacker\=LEO
+/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.enable.visibility.order=true
+@org.eclipse.jdt.ui=3.9.2.v20131106-1600
