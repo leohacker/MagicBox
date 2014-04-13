@@ -4,6 +4,9 @@
 *.sublime-project
 *.sublime-workspace
 
+### JetBrains IDE
+.idea/
+
 ### Compiled source
 *.com
 *.class
