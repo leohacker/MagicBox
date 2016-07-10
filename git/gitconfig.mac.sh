@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 git config --global user.name "Leo Jiang"
 git config --global user.email leo.jiang.dev@gmail.com
 git config --global core.editor vim
