@@ -1,73 +1,30 @@
 set nocompatible
 
-""" Vundle
-filetype off            " required by Pathogen or Vundle.
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-Bundle 'gmarik/vundle'
-
-" Bundles on github
-" Bundle 'spf13/snipmate-snippets'
-" write HTML in CSS-like syntax
-" Bundle 'rstacruz/sparkup'
-" Bundles in vim-scripts repos
-" Bundle 'snipMate'
-Bundle 'delimitMate.vim'
-Bundle 'matchit.zip'
-" Bundle 'NrrwRgn'
-Bundle 'SearchComplete'
-
-" Bundle 'minibufexpl.vim'
-" Bundle 'The-NERD-tree'
-" Bundle 'ZoomWin'
-" Bundle 'Gundo'
-
-Bundle 'Syntastic'
-" Bundle 'Tagbar'
-" Bundle 'TaskList.vim'
-Bundle 'tComment'
-
-Bundle 'vim-json-bundle'
-" Bundle 'css_color.vim'
-" Bundles from git repos directly
-
-" Configuration for bundles.
-let g:pymod_lint_write=0
-let g:pymode_run=0
-let g:pymode_doc=1
-let g:pymode_doc_key='K'
-
-let g:miniBufExplMapWindowNavVim=1
-let g:miniBufExplMapWindowNavArrows=1
-let g:miniBufExplMapCTabSwitchBufs=1
-let g:miniBufExplModSelTarget=1
-
-map <leader>task :TaskList<CR>
-map <leader>undo :GundoToggle<CR>
-let g:gundo_preview_bottom=1
-
-map <leader>p :NERDTreeToggle<CR>
-
 """ distributed vimrc
 set exrc                " enable per-directory vimrc
 set secure              " disable unsafe commands in local .vimrc file
 
 """ User Interface
-set guifont=Monaco:h14
-set guioptions-=T
 set ruler               " Show the row and column number of the cursor position in the status line.
 set wildmenu            " Popup a window showing all matching command above command line when autocomplete.
+"set cmdheight=2         " command line height
 set showmode
 set mouse=a             " enable mouse in all modes.
 
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
 """ General
 set hidden              " hidden current unsaved buffer if open a new buffer.
-set modelines=0         " disable modeline
-set history=100         " Sets how many lines of history VIM has to remeber.
+set modelines=0         " disable modeline for security reason.
+                        " modeline in file header like this: /* vim: set ts=8 sw=4 tw=0 noet : */
+set history=100         " Sets how many lines of history VIM has to remember.
+set clipboard=unnamed
 
+""" Behavior
 " backspace key behavior
 set backspace=eol,start,indent
 set nowrap
@@ -77,7 +34,10 @@ highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
 
 set autoread            " Set to auto read when a file is changed from the outside.
-set autowrite		" Automatically save before commands like :next and :make
+set autowrite		    " Automatically save before commands like :next and :make
+
+map j gj                " move cursor in wrap line.
+map k gk
 
 " Jump to the last position when reopening a file
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -87,66 +47,39 @@ set incsearch           " incremental search mode
 set hlsearch            " highlight search things
 set ignorecase          " ignore case when searching
 set smartcase           " only works when ignorecase on
+set magic               " turn magic on for regex.
 
-" Loading the plugin and indentation rules according to the dectected filetype. 
+" Loading the plugin and indentation rules according to the detected filetype.
 filetype plugin indent on
 
 " encoding
 set encoding=utf-8
-set fileencodings=utf-8,latin-1,chinese
+set fileencodings=utf-8,latin-1
+set ffs=unix,dos,mac    " Use unix as the standard file type
 
 """ Coding
 syntax on
-set number		" show line number
-set showmatch 		" show matching brackets.
+set number		        " show line number
+set showmatch 		    " show matching brackets.
 set matchtime=2         " the length of time to show matching paren.
 set foldlevel=9         " open all folds
 
 set iskeyword+=_,$,@,%,#,-  " don't linebreak when encounter these characters.
 
-set tabstop=8           " The number of spaces count for a TAB.
-set softtabstop=4	" The number of spaces inserted when typing TAB. If not expandtab, type TAB twice, will get one TAB.
-set shiftwidth=4	" The number of spaces when auto-indent.
-set expandtab		" Use the spaces only.
-set smarttab            " Insert appropriate spaces in front of line according to shiftwidth, tabstop, softtabstop. 
+set tabstop=4           " The number of spaces count for a TAB.
+set softtabstop=4	    " The number of spaces inserted when typing TAB. If not expandtab, type TAB twice, will get one TAB.
+set shiftwidth=4	    " The number of spaces when auto-indent.
+set expandtab		    " Use the spaces only.
+set smarttab            " Insert appropriate spaces in front of line according to shiftwidth, tabstop, softtabstop.
 set autoindent
 set smartindent
 "set cindent            " cindent will disable smartindent, but only for C-like programming.
 
-
-" jsfl JavaScript in Flash, same syntax as javascript
-autocmd BufRead,BufNewFile *.jsfl set filetype=javascript
-
-" Python
-let python_highlight_all=1
-augroup python_autocmd
-    autocmd!
-    autocmd FileType python set foldmethod=indent
-    autocmd FileType python set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-augroup END
-
-" Zencoding
-let g:user_zen_settings = {
-  \  'php' : {
-  \    'extends' : 'html',
-  \    'filters' : 'c',
-  \  },
-  \  'xml' : {
-  \    'extends' : 'html',
-  \  },
-  \  'haml' : {
-  \    'extends' : 'html',
-  \  },
-  \}
-
-" JSON
-au! BufRead,BufNewFile *.json set filetype=json
-augroup json_autocmd
-    autocmd!
-    autocmd FileType json set autoindent
-    autocmd FileType json set formatoptions=tcq2l
-    autocmd FileType json set textwidth=78 shiftwidth=2
-    autocmd FileType json set softtabstop=2 tabstop=8
-    autocmd FileType json set expandtab
-    autocmd FileType json set foldmethod=syntax
-augroup END
+" Delete trailing white space on save, useful for Python and CoffeeScript ;)
+func! DeleteTrailingWS()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+endfunc
+autocmd BufWrite *.py :call DeleteTrailingWS()
+autocmd BufWrite *.coffee :call DeleteTrailingWS()
